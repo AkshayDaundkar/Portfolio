@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from jopecuro.com/old/formpage.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Feb 2023 11:59:08 GMT -->
+<head>
+        <link rel="shortcut icon" href="images/jr.ico" />
+        <script src="../../ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Font -->
+	<link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" href="form.css" >
+        <script src="form.js"></script>
+    </head>
+    <body >
+        <div class="container">
+            <div id="form-main">
+                <div id="form-div">
+                    <div class="gotext"><h1 style="color: #696870;">Contact me</div>
+                        <div><img class="imagecon" src="images/contacts.svg"></div>
+                        <div align="right">
+                    <form class="montform" id="reused_form">
+                        <p class="name">
+                            <input name="name" type="text" class="feedback-input" required placeholder="name" id="name" />
+                        </p>
+                        <p class="email">
+                            <input name="email" type="email" required class="feedback-input" id="email" placeholder="email" />
+                        </p>
+                        <p class="text">
+                            <textarea name="message" class="feedback-input" id="comment" placeholder="message"></textarea>
+                        </p>
+
+                        <div style="float: left;">
+                           <a href="http://designerjr.com/"><div><img src="images/reply.svg" style="width: 40px;"></div></a>
+                        </div>
+
+                        
+                            <button type="submit" class="button-blue submit">Send</button>
+                            <div class="ease"></div>
+                        
+                        
+                    </form>
+                    <div id="error_message" style="width:100%; height:100%; display:none; ">
+                        <h4>
+                            Error
+                        </h4>
+                        Sorry there was an error sending your form. 
+                    </div>
+                    <div id="success_message" style="width:100%; height:100%; display:none;color: #696870;"> <h2>Success! Your Message was Sent Successfully.</h2> </div>
+                </div>
+            </div>
+        </div>
+    </body>
+        <script>
+        $(document).ready(function(){
+
+/*! Fades in page on load */
+$('body').css('display', 'none');
+$('body').fadeIn(1000);
+
+});
+    </script>
+
+<!-- Mirrored from jopecuro.com/old/formpage.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Feb 2023 11:59:09 GMT -->
+</html>
