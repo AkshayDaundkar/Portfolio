@@ -1,6 +1,6 @@
 :root {
-  --p1:#00ABE4;
-  --p3:#ff5733;
+  --p1: #00abe4;
+  --p3: #ff5733;
   --pf: Inter;
 }
 @-webkit-keyframes vlt_animate_icon_bottom {
@@ -131,7 +131,7 @@
   background-color: #999;
 }
 .vlt-large-heading {
-  font-size: 5rem;
+  font-size: 3.5rem;
 }
 @media only screen and (max-width: 575px) {
   .vlt-large-heading {
@@ -774,7 +774,6 @@ textarea:focus::-webkit-input-placeholder {
 }
 .is-dark .vlt-navbar .vlt-navbar-logo img.white {
   display: none;
- 
 }
 .vlt-navbar .vlt-navbar-logo:hover {
   text-decoration: none;
@@ -1475,7 +1474,6 @@ body .pp-scrollable {
   animation-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  
 }
 .vlt-award-item {
   display: -webkit-box;
