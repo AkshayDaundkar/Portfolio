@@ -1846,7 +1846,13 @@
                         <span class="has-first-color">something together!</span>
                       </h5>
                       <div class="vlt-gap-40"></div>
-                      <form class="vlt-contact-form" novalidate="novalidate">
+                      <form
+                        class="vlt-contact-form"
+                        id="contact-form"
+                        action="process_form.php"
+                        method="post"
+                        novalidate="novalidate"
+                      >
                         <div class="vlt-form-row two-col">
                           <div class="vlt-form-group">
                             <label class="has-white-color" for="name"
@@ -1904,7 +1910,11 @@
                           Sorry something went wrong!
                         </div>
                         <!--Button-->
-                        <button class="vlt-btn vlt-btn--primary">
+                        <button
+                          class="vlt-btn vlt-btn--primary"
+                          type="button"
+                          onclick="submitForm()"
+                        >
                           <span class="vlt-btn__text">Contact Me</span
                           ><span
                             class="vlt-btn__icon vlt-btn__icon--right"
@@ -1946,5 +1956,30 @@
     <script src="assets/scripts/vlt-plugins.min.js"></script>
     <script src="assets/scripts/vlt-helpers.js"></script>
     <script src="assets/scripts/vlt-controllers.min.js"></script>
+    <script>
+      function submitForm() {
+        // Get form data
+        const form = document.getElementById("contact-form");
+        const formData = new FormData(form);
+
+        // Fetch API to send form data to server-side script
+        fetch("process_form.php", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.json()) // Assuming the server responds with JSON
+          .then((data) => {
+            // Handle the response, you can show a success message or perform other actions
+            if (data.success) {
+              alert("Your message is successfully sent...");
+            } else {
+              alert("Sorry, something went wrong!");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+    </script>
   </body>
 </html>
